@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Electron Escape</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>⚡ Electron Escape</h1>
+  <p>Score: <span id="score">0</span></p>
+
+  <div id="game">
+    <div id="electron"></div>
+    <div id="obstacle"></div>
+  </div>
+
+  <button onclick="jump()">Jump</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
