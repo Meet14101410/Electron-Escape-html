@@ -1,0 +1,50 @@
+body{
+  text-align:center;
+  font-family:Arial,sans-serif;
+  background:#111;
+  color:#0ff;
+}
+
+#game{
+  width:400px;
+  height:200px;
+  margin:20px auto;
+  border:2px solid #0ff;
+  background:#222;
+  position:relative;
+  overflow:hidden;
+}
+
+#electron{
+  width:20px;
+  height:20px;
+  background:#0ff;
+  border-radius:50%;
+  position:absolute;
+  left:40px;
+  bottom:0;
+}
+
+#obstacle{
+  width:20px;
+  height:40px;
+  background:red;
+  position:absolute;
+  right:0;
+  bottom:0;
+  animation:move 2s linear infinite;
+}
+
+.jump{
+  bottom:80px !important;
+}
+
+@keyframes move{
+  from{right:-20px;}
+  to{right:420px;}
+}
+
+button{
+  padding:8px 16px;
+  cursor:pointer;
+}
