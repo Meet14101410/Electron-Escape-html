@@ -1,0 +1,25 @@
+const e = document.getElementById("electron");
+const o = document.getElementById("obstacle");
+const s = document.getElementById("score");
+let score = 0;
+
+function jump() {
+  if (!e.classList.contains("jump")) {
+    e.classList.add("jump");
+    setTimeout(() => e.classList.remove("jump"), 500);
+  }
+}
+
+setInterval(() => {
+  let eb = parseInt(getComputedStyle(e).bottom);
+  let ol = o.getBoundingClientRect().left;
+  let el = e.getBoundingClientRect().left;
+
+  if (ol < el + 20 && ol > el - 20 && eb < 30) {
+    alert("Game Over!\nScore: " + score);
+    location.reload();
+  }
+
+  score++;
+  s.textContent = score;
+}, 100);
